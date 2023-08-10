@@ -8,19 +8,19 @@ Soft also saves the **logs of temperature** with the preset frequency.
 ## Dependencies
 `Python 3.10.0`
 Some python `modules`:
-    - RPi.GPIO
-    - time
-    - os
-    - datetime
-    - logging
+    -RPi.GPIO
+    -time
+    -os
+    -datetime
+    -logging
 
 
 ## Electric Circuit
 All you need are:
-    - `Raspberry Pi`
-    - `Fan 5v DC`
-    - `NPN transistor` (e.g. BC337, but analogs are possible) 
-    - `Resistor 1k Ohm`
+    -`Raspberry Pi`
+    -`Fan 5v DC`
+    -`NPN transistor` (e.g. BC337, but analogs are possible) 
+    -`Resistor 1k Ohm`
 
 The **electric circuit** is attached below
 
