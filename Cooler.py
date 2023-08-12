@@ -51,6 +51,8 @@ class Cooler:
                 iterator += 1
                 sleep(self.sleep_time)
 
+                print(f'We are before the if statement. Iter: {iterator}')
                 if iterator >= self.log_freq:   # log the temp if need iteration was achieved
+                    print("Trying to lof the temp")
                     self.logger.info(temp)
                     iterator = 0
