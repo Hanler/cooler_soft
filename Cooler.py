@@ -48,11 +48,9 @@ class Cooler:
                 self.pin_state = not self.pin_state   # change the state
                 GPIO.output(self.control_pin, self.pin_state) # set the new state to pin
 
-                iterator += 1
-                sleep(self.sleep_time)
+            iterator += 1
+            sleep(self.sleep_time)
 
-                print(f'We are before the if statement. Iter: {iterator}')
-                if iterator >= self.log_freq:   # log the temp if need iteration was achieved
-                    print("Trying to lof the temp")
-                    self.logger.info(temp)
-                    iterator = 0
+            if iterator >= self.log_freq:   # log the temp if need iteration was achieved
+                self.logger.info(temp)
+                iterator = 0
