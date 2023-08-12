@@ -7,6 +7,6 @@ def get_temp():
     """
     temp = check_output(["vcgencmd", "measure_temp"]).decode()  # temperature query
     print(f'Decoded: {temp}')
-    print("Parsed: {}".format(findall('\d+\. \d+', temp)))
+    print("Parsed: {}".format(findall('\d+\.\d+', temp)))
     temp = float(findall('\d+\. \d+', temp)[0]) # execute the temp val from string by regex
     return temp
