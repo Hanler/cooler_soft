@@ -1,4 +1,4 @@
-import os
+import os, sys
 from datetime import date
 import logging
 
@@ -12,6 +12,12 @@ class Logger():
         formatted_date = today_date.strftime("%d_%m_%Y")    # convert the date to a specific format
 
         logger_fn = 'logger_{}.txt'.format(formatted_date)
+        script_dir = os.path.dirname(os.path.abspath(sys.argv[0]))  # get the script path
+        logs_dir = os.path.join(script_dir, logs_dir)   # get the full path to log dir
+
+        if not os.path.exists(logs_dir):
+            os.makedirs(logs_dir)
+
         logger_path = os.path.join(logs_dir, logger_fn)
 
         self.logger = logging.getLogger(__name__)   # give a name to logger
