@@ -43,7 +43,6 @@ class Cooler:
         iterator = 0
         while True:
             temp = get_temp()   # get the temperature
-            print(temp)
 
             if temp >= self.temp_on and not self.pin_state or temp < self.temp_off and self.pin_state:
                 self.pin_state = not self.pin_state   # change the state
