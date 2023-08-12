@@ -6,5 +6,6 @@ def get_temp():
     Get the temperature, execute the value and return it
     """
     temp = check_output(["vcgencmd", "measure_temp"]).decode()  # temperature query
+    print(f'Decoded: {temp}')
     temp = float(findall('\d+\. \d+', temp)[0]) # execute the temp val from string by regex
     return temp
