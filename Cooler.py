@@ -18,7 +18,7 @@ class Cooler:
 
         # Initalize the pins
         GPIO.setmode(GPIO.BCM)  # the numeric mode
-        GPIO.setup(self.control_pin, GPIO.OUT, inital=0) # set the OUTPUT mode to signal pin
+        GPIO.setup(self.control_pin, GPIO.OUT, initial=0) # set the OUTPUT mode to signal pin
 
         try:
             self.main()
